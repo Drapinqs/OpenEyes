@@ -25,6 +25,30 @@
   font-family: 'Jost';
 }
 
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  * {
+    font-size: 105%;
+  }
+  .video {
+      width: 0;
+    }
+  .container{
+  padding: 20px;
+}
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  * {
+    font-size: 95%;
+  }
+    .video {
+      width: 0;
+    }
+    .container{
+  padding: 20px;
+}
+}
 
 body{
   overflow: hidden;
@@ -206,7 +230,7 @@ opacity: 1;
 
 </head>
 
-<body translate="no">
+<body>
     <div class="banner">
       <h1 class="main-text">OpenEyes</h1>
     </div>
