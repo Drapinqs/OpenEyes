@@ -1,9 +1,10 @@
 <html lang="en"><head>
 
-  <title>OpenEyes - Home</title>
+  <title>OpenEyes - Definitions</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
+
 <style>
 
 @font-face {
@@ -17,46 +18,42 @@
        url('files/fonts/jost-v12-latin-regular.svg#Jost') format('svg');
 }
 
-
 *{
-  padding:0;
   margin:0;
   font-size: 30px;
   font-family: 'Jost';
 }
 
+*::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 @media only screen and (max-width:800px) {
   /* For tablets: */
   * {
-    font-size: 105%;
+    font-size: 100%;
+    text-align: center;
   }
-  .video {
-      width: 0;
-    }
-  .container{
-    padding: 20px;
-    max-width: 20px;
-}
 }
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
   * {
     font-size: 95%;
+    text-align: center;
   }
-  .video {
-    width: 0;
-    }
-  .container{
-    padding: 20px;
-    max-width: 20px;
 }
+
+html {
+    scroll-behavior: smooth !important;
 }
 
 body{
-  overflow: hidden;
   color: white;
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 30 ,1) 100%);
+  background-color: #000000;
+  height: 100%;
+  min-height: 100%;
 }
 
 h1{
@@ -71,10 +68,28 @@ h1:hover{
   text-shadow: 0px 0px 20px black;
 }
 
+.item {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.item .img-wrap:before {
+  content: '';
+  background-image: linear-gradient(to top, rgba(0,0,0,255), rgba(239,239,239,0));
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.item .img-wrap:after {
+  content: '';
+  display: block;
+}
 .banner{
   background-image:url('files/images/banner-bgrnd.jpg');
   background-color: 000000;
-  height: 150px;
+  height: 170px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,12 +102,10 @@ h1:hover{
   background-size: 100%;
 }
 
-
 .banner:hover {
   background-size: 120%;
   filter: brightness(80%);
 }
-
 
 nav{
   background: #000;
@@ -118,32 +131,58 @@ nav ul li a:hover{
   font-size: 110%;
 }
 
-.container{
-  position: relative;
-  max-width: 920px;
-  padding-left: 200px;
-  padding-right: 200px;
-  margin: 0 auto;
-  padding: 80px;
+.sec1{
+  display: block;
+  justify-content: center;
+  text-align: center;
 }
 
-.container h2{
-  display: flex;
+.sec1 h2{
+  text-align: center;
+  font-size: 120%;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
-.container li{
-  text-decoration: none;
-  padding-left: 0.5em;
-  list-style-type: none;
+.sec1 a{
+  padding-top: 20px;
+  padding-bottom: 200px;
+  text-shadow: 0px 0px 4px white;
+  word-spacing: 0.13em;
+  letter-spacing: 0.03em;
+  color: inherit;
 }
 
-.center {
-  margin: 0;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.sec1 i{
+  text-shadow: 0px 0px 4px black;
+  letter-spacing: 0.01em;
+  font-size: 80%;
+  color: #dddddd;
+  padding-right: 100px;
+}
+
+.textref{
+  text-shadow: 0px 0px 4px black;
+  letter-spacing: 0.01em;
+  font-size: 90%;
+  color: #dddddd;
+}
+
+.sec1 div{
+  text-align: left;
+  padding-left: 3.5em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  letter-spacing: 0.02em;
+}
+
+.sec1 div:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 2px solid white;
 }
 
 @keyframes gradient-move {
@@ -159,6 +198,9 @@ background-position: 0% 50%;
 }
 
 .button {
+position: relative;
+left: 50%;
+transform: translate(-50%, 0);
 border-radius: 50em;
 padding: 0.3em 2em;
 line-height: 1.6em;
@@ -167,12 +209,11 @@ font-weight: 600;
 letter-spacing: 0.02em;
 text-decoration: none;
 transition: 0.3s cubic-bezier(0.34, 0.01, 0.35, 0.98), opacity 0.5s;
-position: relative;
 display: inline-block;
-box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.7);
+box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255);
 color: white;
-overflow: hidden;
 }
+
 .button:before {
 transition: 1.5s cubic-bezier(0.34, 0.01, 0.35, 0.98);
 overflow: hidden;
@@ -190,8 +231,8 @@ right: 0;
 bottom: 0;
 opacity: 0;
 }
+
 .button:after {
-content: attr(data-title);
 position: absolute;
 top: 50%;
 left: 0;
@@ -202,31 +243,24 @@ transition: opacity 0.5s cubic-bezier(0.34, 0.01, 0.35, 0.98) 0.1s, transform 0s
 opacity: 0;
 color: rgba(0, 0, 0);
 }
+
 .button span {
 display: inline-block;
 transition: opacity 1.5s cubic-bezier(0.34, 0.01, 0.35, 0.98) 0.5s;
 opacity: 1;
 }
+
 .button:hover, .button:focus, .button:active {
 box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0);
 color: rgba(0, 0, 0);
 }
+
 .button:hover:before, .button:focus:before, .button:active:before {
 opacity: 1;
 transition: 0.3s cubic-bezier(0.34, 0.01, 0.35, 0.98);
 }
-.button:hover span, .button:focus span, .button:active span {
-transform: translate3d(0, 150%, 0);
-transition: transform 0.5s cubic-bezier(1, 0, 0, 1), opacity 0s 0.5s;
-opacity: 0;
-}
-.button:hover:after, .button:focus:after, .button:active:after {
-transform: translate3d(0, -50%, 0);
-transition: transform 0.5s cubic-bezier(1, 0, 0, 1) 0.1s;
-opacity: 1;
-}
 
-.home {
+.define {
   color: aqua;
 }
 </style>
@@ -240,33 +274,35 @@ opacity: 1;
     <div class="banner">
       <h1 class="main-text">OpenEyes</h1>
     </div>
-
-    <!--Navbar-->
-    <header>
-      <nav>
-        <ul>
-          <li><a class="home" href="index.html">Home</a></li>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="learn.html">Learn</a></li>
-          <li><a href="definitions.html">Definitons</a></li>
+          <li><a class="define" href="definitions.html">Definitons</a></li>
           <li><a href="socials.html">Contact</a></li>
         </ul>
       </nav>
     </header>
+      <div class="page-wrap">
+        <div class="item">
+        <div class="img-wrap">
+          <img src="files/images/binary.jpg"  width="100%" height="400px"></div></div>
+         <div class="sec1">
+           <h2>Definitions</h2>
+              <div>What is a computer?<br><i>A computer is a technological device used for doing calculations that humans might not be able to do sometimes. For the most part, a computer can be on for a very long time while a human can only be awake for so many hours.</i></div>
 
-    <div class="container">
-      <h2>OpenEyes</h2>
-        <li>Open your eyes to the world of technology, and unlock knowledge that's <strong>imperative</strong> to better your understanding of technology.</li>
-    <div class="center">
-      <a class="button" href="about.html" data-title="Lets Go!"><span>Learn More</span></a>
-    </div>
-    </div>
-      <section>
-        <video class="video" width="100%" muted autoplay loop playsinline><source type="video/mp4" src="https://cdn.discordapp.com/attachments/741464074986192918/959233828080205854/ComputerUser.mp4">
-			  </video>
-      </section>
+              <div>What about my device?<br><i>Your desktop, laptop, mobile phone, game console, microwave, vacuum, car, etc.<br>These are all examples of computers.</i></div>
 
+              <div>What Operating System (OS) Do I Have?<br><i>The predominance of desktops and laptops have Windows 10 or Windows 11.<br>Your phone is using its own operating system, most likely based on Linux.</i></div>
 
+              <div>How Do I Make My Windows Computer Faster?<br><i>Download the Windows Boost Pack <a class="textref" href="learn.html#winopt">Here</a></i></div>
 
+              <div>What Is The Internet?<br><i>The internet now is mostly used for sharing information, and contacting people.<br>You can talk to someone thousands of miles away without even getting off your couch!</i></div>
+
+            </div>
+            <a class="button" href="learn.html"><span>Tools and Resources</span></a>
+      </div>
   </body>
 </html>

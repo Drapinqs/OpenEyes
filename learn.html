@@ -3,6 +3,7 @@
   <title>OpenEyes - Tools</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
 
 <style>
 
@@ -44,9 +45,13 @@
   }
 }
 
+html {
+    scroll-behavior: smooth !important;
+}
+
 body{
   color: white;
-  background-color: #151515;
+  background-color: #000000;
   height: 100%;
   min-height: 100%;
 }
@@ -63,6 +68,24 @@ h1:hover{
   text-shadow: 0px 0px 20px black;
 }
 
+.item {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.item .img-wrap:before {
+  content: '';
+  background-image: linear-gradient(to top, rgba(0,0,0,255), rgba(239,239,239,0));
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.item .img-wrap:after {
+  content: '';
+  display: block;
+}
 .banner{
   background-image:url('files/images/banner-bgrnd.jpg');
   background-color: 000000;
@@ -122,18 +145,44 @@ nav ul li a:hover{
 }
 
 .sec1 a{
-  padding-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 200px;
   text-shadow: 0px 0px 4px white;
   word-spacing: 0.13em;
   letter-spacing: 0.03em;
   color: inherit;
 }
 
+.sec1 i{
+  text-shadow: 0px 0px 4px black;
+  letter-spacing: 0.01em;
+  font-size: 80%;
+  color: #dddddd;
+  padding-right: 100px;
+}
+
+.textref{
+  text-shadow: 0px 0px 4px black;
+  letter-spacing: 0.01em;
+  font-size: 90%;
+  color: #dddddd;
+}
+
 .sec1 div{
   text-align: left;
   padding-left: 3.5em;
   padding-top: 15px;
+  padding-bottom: 15px;
   letter-spacing: 0.02em;
+}
+
+.sec1 div:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 2px solid white;
 }
 
 .youtubevideo {
@@ -161,56 +210,63 @@ nav ul li a:hover{
         <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a class="learn" href="learn.html">Learn</a></li>
+          <li><a href="definitions.html">Definitons</a></li>
           <li><a href="socials.html">Contact</a></li>
         </ul>
       </nav>
     </header>
       <div class="page-wrap">
+        <div class="item">
+        <div class="img-wrap">
+          <img src="files/images/learn.jpg"  width="100%" height="400px"></div></div>
          <div class="sec1">
            <h2>Tools and Resources</h2>
-              <div>Digital Breadcrumbs/Open Source Intelligence - <a href="https://osintframework.com" target="_blank">OSINTFramework</a>, <a href="https://www.osinttechniques.com/" target="_blank">OSINTTechniques</a></div>
+              <div>Digital Breadcrumbs/Open Source Intelligence - <a href="https://osintframework.com" target="_blank">OSINTFramework</a>, <a href="https://www.osinttechniques.com/" target="_blank">OSINTTechniques</a><br><i>Digital Breadcrumbs are used to pick up the little traces that people leave behind on the internet. These can be useful for finding missing loved ones, or researching people and doing background checks if you are in the position for hiring them.</i></div>
 
-              <div>(URL) Link Shorteners - <a href="https://v.ht" target="_blank">V.HT</a>, <a href="https://tinyurl.com" target="_blank">TinyURL</a>, <a href="https://bit.ly" target="_blank">Bit.ly</a>, <a href="https://u.nu" target="_blank">u.nu</a></div>
+              <div>(URL) Link Shorteners - <a href="https://v.ht" target="_blank">V.HT</a>, <a href="https://tinyurl.com" target="_blank">TinyURL</a>, <a href="https://bit.ly" target="_blank">Bit.ly</a>, <a href="https://u.nu" target="_blank">u.nu</a><br><i>URL Shorteners are used to redirect you to a large link. For example, you can change an extremely long link to a .pdf file, into just a few characters.</i></div>
 
-              <div>Windows 10 CMD Commands - <a href="https://ss64.com/nt/" target="_blank">SS64</a></div>
+              <div>Windows 10/11 CMD Commands - <a href="https://ss64.com/nt/" target="_blank">SS64</a><br><i>List of commands that are used in the Windows 10 and Windows 11 command prompt. Mostly used by IT specialists, typically for computer repair.</i></div>
 
-              <div>Check Information for Data Breach Leaks - <a href="https://haveibeenpwned.com/" target="_blank">HaveIBeenPwned</a>, <a href="https://haveibeenpwned.com/Passwords" target="_blank">Passwords</a>, <a href="https://www.dehashed.com/" target="_blank">DEHASHED</a></div>
+              <div>Check Information for Data Breach Leaks - <a href="https://haveibeenpwned.com/" target="_blank">HaveIBeenPwned</a>, <a href="https://haveibeenpwned.com/Passwords" target="_blank">Passwords</a>, <a href="https://www.dehashed.com/" target="_blank">DEHASHED</a><br><i>Search if your passwords, emails, or phone numbers have been leaked on the internet.</i></div>
 
               <div>Remove Advertisements Extension - <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank">uBlockOrigin(Chrome)</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak" target="_blank">uBlockOrigin(Edge)</a>, 
-              <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/" target="_blank">uBlockOrigin(Firefox)</a></div>
+              <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/" target="_blank">uBlockOrigin(Firefox)</a><br><i>Remove any unwanted advertisements for modern-day browsers by adding this open-source extension.</i></div>
 
-              <div>YouTube Video/Audio Downloader - <a href="https://yt2mp3.info" target="_blank">yt2mp3</a>, <a href="https://yt5s.com" target="_blank">yt5s</a>, <a href="https://y2mate.is" target="_blank">y2mate</a></div>
+              <div>YouTube Video/Audio Downloader - <a href="https://yt2mp3.info" target="_blank">yt2mp3</a>, <a href="https://yt5s.com" target="_blank">yt5s</a>, <a href="https://y2mate.is" target="_blank">y2mate</a><br><i>Extract the video or audio from a YouTube video online. Make sure to check the copyright,  or have the owner's permission before using the video.</i></div>
 
-              <div>Online HTML Editor - <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic" target="_blank">W3Schools</a>, <a href="https://codepen.io/pen/" target="_blank">CodePen</a>, <a href="https://jsfiddle.net/" target="_blank">JSFiddle</a></div>
+              <div id="htmledit">Online HTML Editor - <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic" target="_blank">W3Schools</a>, <a href="https://codepen.io/pen/" target="_blank">CodePen</a>, <a href="https://jsfiddle.net/" target="_blank">JSFiddle</a><br><i>Create or edit website pages by using one of these applications.</i></div>
 
-              <div>Operating Systems - <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank">Windows10</a>, <a href="https://www.microsoft.com/software-download/windows11" target="_blank">Windows11</a>, <a href="https://www.kali.org/get-kali/#kali-platforms" target="_blank">Kali</a>, <a href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a>, <a href="https://zorin.com/os/download/" target="_blank">Zorin</a></div>
+              <div>Operating Systems - <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank">Windows10</a>, <a href="https://www.microsoft.com/software-download/windows11" target="_blank">Windows11</a>, <a href="https://www.kali.org/get-kali/#kali-platforms" target="_blank">Kali</a>, <a href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a>, <a href="https://zorin.com/os/download/" target="_blank">Zorin</a><br><i>Operating systems manage all of the software configured on your devices.</i></div>
 
-              <div>Programming Languages/IDE's - <a href="https://www.python.org/downloads/" target="_blank">Python</a>, <a href="https://www.java.com/download/ie_manual.jsp" target="_blank">Java</a>, <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">VisualStudio</a>, <a href="https://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>, <a href="https://www.jetbrains.com/pycharm/download/" target="_blank">PyCharm</a></div>
+              <div id="IDE">Programming Languages/IDE's - <a href="https://www.python.org/downloads/" target="_blank">Python</a>, <a href="https://www.java.com/download/ie_manual.jsp" target="_blank">Java</a>, <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">VisualStudio</a>, <a href="https://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>, <a href="https://www.jetbrains.com/pycharm/download/" target="_blank">PyCharm</a><br><i>These applications make editing code much easier, and more productive, by providing you with a full code editing environment.</i></div>
 
-              <div>Online Text Hosting - <a href="https://www.toptal.com/developers/hastebin/" target="_blank">Hastebin</a>, <a href="https://ghostbin.com/" target="_blank">Ghostbin</a></div>
-              <div>Technology News - <a href="https://thehackernews.com/" target="_blank">TheHackerNews</a>, <a href="https://www.wired.com/" target="_blank">Wired</a>, <a href="https://www.bbc.com/news/technology" target="_blank">BBC</a></div>
+              <div id="texthosting">Online Text Hosting - <a href="https://www.toptal.com/developers/hastebin/" target="_blank">Hastebin</a>, <a href="https://ghostbin.com/" target="_blank">Ghostbin</a><br><i>Upload any text message to these servers, where only people who have the link can read them.</i></div>
 
-              <div>Free File Hosting - <a href="https://anonfiles.com" target="_blank">AnonFiles</a>, <a href="http://www.filedropper.com/index.php" target="_blank">FileDropper</a>, <a href="https://ufile.io/" target="_blank">ufile</a></div>
+              <div>Technology News - <a href="https://thehackernews.com/" target="_blank">TheHackerNews</a>, <a href="https://www.wired.com/" target="_blank">Wired</a>, <a href="https://www.bbc.com/news/technology" target="_blank">BBC</a><br><i>Obtain the latest news in the technological realm.</i></div>
 
-              <div>File Management - <a href="https://www.7-zip.org/download.html" target="_blank">7Zip</a>, <a href="https://www.win-rar.com/download.html?&L=0" target="_blank">WinRAR</a></div>
+              <div id="filehosting">Free File Hosting - <a href="https://anonfiles.com" target="_blank">AnonFiles</a>, <a href="http://www.filedropper.com/index.php" target="_blank">FileDropper</a>, <a href="https://ufile.io/" target="_blank">ufile</a><br><i>Similar to <a class="textref" href="#texthosting">Text Hosting</a>, you can host files online to share with anybody you give the link to.</i></div>
 
-              <div>Text Editors - <a href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a>, <a href="https://www.sublimetext.com/download" target="_blank">SublimeText</a>, <a href="https://stedit.app" target="_blank">STEdit</a></div>
+              <div>File Management - <a href="https://www.7-zip.org/download.html" target="_blank">7Zip</a>, <a href="https://www.win-rar.com/download.html?&L=0" target="_blank">WinRAR</a><br><i>Manage your folders and files on your computer. You can upload any of your files by using one of the links in the <a class="textref" href="#filehosting">Free File Hosting</a> section.</i></div>
 
-              <div>Download Management - <a href="https://www.freedownloadmanager.org/download.htm" target="_blank">FreeDownloadManager</a>, <a href="https://www.internetdownloadmanager.com/" target="_blank">IDM</a>, <a href="https://jdownloader.org/download/index" target="_blank">JDownloader</a></div>
+              <div>Text Editors - <a href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a>, <a href="https://www.sublimetext.com/download" target="_blank">SublimeText</a>, <a href="https://stedit.app" target="_blank">STEdit</a><br><i>Similar to <a class="textref" href="#IDE">IDE's</a> or <a class="textref" href="#htmledit">Online HTML Editors</a>, you can use these programs to view any text file, or modify it.</i></div>
 
-              <div>Photo Manipulation - <a href="https://www.dotpdn.com/downloads/pdn.html" target="_blank">Paint.net</a>, <a href="https://www.sublimetext.com/download" target="_blank">Krita</a>, <a href="https://www.gimp.org/downloads/" target="_blank">GIMP</a></div>
+              <div>Download Management - <a href="https://www.freedownloadmanager.org/download.htm" target="_blank">FreeDownloadManager</a>, <a href="https://www.internetdownloadmanager.com/" target="_blank">IDM</a>, <a href="https://jdownloader.org/download/index" target="_blank">JDownloader</a><br><i>Manage your downloads on your computer. You can also utilize these programs to improve your download spped by downloading in <a class="textref" href="https://board.jdownloader.org/showthread.php?p=291817#post291817">chunks</a>.</i></div>
 
-              <div>Additional Web Browsers - <a href="https://brave.com/download/" target="_blank">Brave</a>, <a href="https://download-chromium.appspot.com/" target="_blank">Chromium</a>, <a href="https://github.com/ModuleArt/ferny/releases/tag/v3.1.0" target="_blank">Ferny</a>, <a href="https://www.puffin.com/secure-browser" target="_blank">Puffin</a></div>
+              <div>Photo Manipulation - <a href="https://www.dotpdn.com/downloads/pdn.html" target="_blank">Paint.net</a>, <a href="https://www.sublimetext.com/download" target="_blank">Krita</a>, <a href="https://www.gimp.org/downloads/" target="_blank">GIMP</a><br><i>These programs can be utilized to edit any digital picture, or create one.</i></div>
 
-              <div>Anonymity - <a href="https://www.torproject.org/download/" target="_blank">TOR</a>, <a href="https://www.security.org/vpn/best/" target="_blank">VPNs</a>, <a href="https://geonode.com/free-proxy-list/" target="_blank">GeoNode</a>, <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>, <a href="https://www.fakenamegenerator.com/" target="_blank">NameGenerator</a>, <a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a></div>
+              <div>Additional Web Browsers - <a href="https://brave.com/download/" target="_blank">Brave</a>, <a href="https://download-chromium.appspot.com/" target="_blank">Chromium</a>, <a href="https://github.com/ModuleArt/ferny/releases/tag/v3.1.0" target="_blank">Ferny</a>, <a href="https://www.puffin.com/secure-browser" target="_blank">Puffin</a><br><i>Getting tired of Google Chrome or Edge? Use some of these!</i></div>
 
-              <div>Passwords - <a href="https://www.security.org/how-secure-is-my-password/" target="_blank">PasswordStrengthCheck</a>, <a href="https://passwordsgenerator.net/" target="_blank">PasswordGenerator</a>, <a href="https://www.lastpass.com/security/staying-secure-online" target="_blank">LastPass</a></div>
+              <div>Anonymity - <a href="https://www.torproject.org/download/" target="_blank">TOR</a>, <a href="https://www.security.org/vpn/best/" target="_blank">VPNs</a>, <a href="https://geonode.com/free-proxy-list/" target="_blank">GeoNode</a>, <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>, <a href="https://www.fakenamegenerator.com/" target="_blank">NameGenerator</a>, <a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a><br><i>Your information is somewhere out there on the web. These tools are to help keep you as private and anonymous as possible.</i></div>
 
-              <div>Currency - <a href="https://privacy.com/" target="_blank">Privacy(CreditCardCreator)</a>, <a href="https://www.xe.com/" target="_blank">XE</a>, <a href="https://www.paypal.com/us/home" target="_blank">PayPal</a></div>
+              <div>Passwords - <a href="https://www.security.org/how-secure-is-my-password/" target="_blank">PasswordStrengthCheck</a>, <a href="https://passwordsgenerator.net/" target="_blank">PasswordGenerator</a>, <a href="https://www.lastpass.com/security/staying-secure-online" target="_blank">LastPass</a><br><i>These tools can help you manage your passwords, or even create them.</i></div>
 
-              <div>Crypto Currency - <a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">CoinMarketCap(CreditCardCreator)</a>, <a href="https://www.coinbase.com/" target="_blank">Coinbase</a>, <a href="https://paxful.com/buy-bitcoin" target="_blank">Paxful</a></div>
+              <div>Currency - <a href="https://privacy.com/" target="_blank">Privacy(CreditCardCreator)</a>, <a href="https://www.paypal.com/us/home" target="_blank">PayPal</a>, <a href="https://www.xe.com/" target="_blank">XE</a><br><i>These sites are intended for managing money, or checking the currency exchange rates.</i></div>
 
-              <div>Disposable Emails - <a href="https://yopmail.com/en/" target="_blank">YopMail</a>, <a href="https://temp-mail.org/en/" target="_blank">Temp-Mail</a>, <a href="https://mailpoof.com/" target="_blank">Mailproof</a></div>
+              <div>Crypto Currency - <a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">CoinMarketCap(CreditCardCreator)</a>, <a href="https://www.coinbase.com/" target="_blank">Coinbase</a>, <a href="https://paxful.com/buy-bitcoin" target="_blank">Paxful</a><br><i>These sites are intended for checking the crypto-currency exchange rates.</i></div>
+
+              <div>Disposable Emails - <a href="https://yopmail.com/en/" target="_blank">YopMail</a>, <a href="https://temp-mail.org/en/" target="_blank">Temp-Mail</a>, <a href="https://mailpoof.com/" target="_blank">Mailproof</a><br><i>Here you can create emails, that you most likely will never use again. These are great for singing up on sketchy websites.</i></div>
+
+              <div id="winopt">Windows Optimization - <a href="https://raw.githubusercontent.com/Drapinqs/drapinqs.github.io/main/downloads/Windows%2010%20Boost%20Pack%20%5BDrapinqs%5D.zip" target="_blank">WindowsBoostPack</a><br><i>Make your Windows 10/Windows 11 computer faster!</i></div>
 
               <iframe class="youtubevideo" width="60%" height="40%" src="https://www.youtube.com/embed/6sXvuxmjuks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

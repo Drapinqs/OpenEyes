@@ -3,6 +3,7 @@
   <title>OpenEyes - About</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
 
 <style>
 
@@ -24,6 +25,12 @@
   font-family: 'Jost';
 }
 
+*::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 @media only screen and (max-width:800px) {
   /* For tablets: */
   * {
@@ -40,9 +47,12 @@
 
 body{
   color: white;
-  background-color: #151515;
-  height: 100%;
-  min-height: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(25, 25, 25 ,1) 100%);
+}
+
+html {
+    scroll-behavior: smooth !important;
 }
 
 h1{
@@ -235,14 +245,15 @@ transition: 0.3s cubic-bezier(0.34, 0.01, 0.35, 0.98);
         <li><a href="index.html">Home</a></li>
           <li><a class="about" href="about.html">About</a></li>
           <li><a href="learn.html">Learn</a></li>
+	    <li><a href="definitions.html">Definitions</a></li>
           <li><a href="socials.html">Contact</a></li>
         </ul>
       </nav>
     </header>
   <div class="sec1">
     <h2>The World of Technology.</h2>
-    <p2>OpenEyes is your "one way ticket" to a deep-dive into computers.</p2>
-      <div>You can learn about any topic if you invest enough time into it. Technology has always been looked at as a difficult concept, with only some individuals out there able to understand it. This is not true, and OpenEyes wants to show you just how easy it all is! OpenEyes is a public source that contains tools, definitions and many more items that are helpful if you wish to educate yourself in the technologic field. Just within a few minutes, you can learn how computers operate, how the internet functions, how to better maintain your own desktops and laptops, and much more!</div>
+    <p2>OpenEyes is your "one-way ticket" to a deep dive into computers.</p2>
+      <div>You can learn about any topic if you invest enough time into it. Technology has always been looked at as a difficult concept, with only some individuals out there able to understand it. This is not true, and OpenEyes wants to show you just how easy it all is! OpenEyes is a non-profit public source that contains tools, definitions and many more items that are helpful if you wish to educate yourself in the technological field. We are an organization, will the sole purpose of mastering your mindset in computers. Just within a few minutes, you can learn how computers operate, how the internet functions, how to better maintain your desktops and laptops, and much more!</div>
       <p>Looking for Technologic Repair? Feel free to <a class="contact" href="socials.html">contact us!</a></p>
       <a class="button" href="learn.html"><span>Get Started</span></a>
       <p2><strong>Click the button to get started!</strong></p2>
